@@ -180,21 +180,29 @@
 
     .checklist{margin:0; padding-left: 18px; color: rgba(241,245,255,0.86); line-height:1.85}
 
-    /* Gallery placeholders */
-    .gallery{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+    /* ✅ Reviews */
+    .stars{
+      color: var(--accent);
+      letter-spacing: 2px;
+      font-size: 14px;
+      margin-bottom: 8px;
     }
-    .ph{
-      border-radius:16px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,0.08);
-      height: 170px;
-      display:grid;
-      place-items:center;
-      color: rgba(241,245,255,0.75);
+    .review-text{
+      margin:0;
+      color: rgba(241,245,255,0.86);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+    .review-name{
+      margin-top: 12px;
+      font-weight: 800;
       font-size: 13px;
+      color: rgba(241,245,255,0.92);
+    }
+    .review-sub{
+      font-size: 12px;
+      color: rgba(241,245,255,0.70);
+      margin-top: 3px;
     }
 
     footer{
@@ -211,7 +219,6 @@
       nav{display:none}
       .grid2{grid-template-columns:1fr}
       .grid3{grid-template-columns:1fr}
-      .gallery{grid-template-columns:1fr}
       .logo{height:42px;}
     }
   </style>
@@ -233,7 +240,7 @@
       <nav>
         <a href="#services">Services</a>
         <a href="#process">Process</a>
-        <a href="#gallery">Work</a>
+        <a href="#reviews">Reviews</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -368,20 +375,48 @@
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section id="gallery">
+  <!-- ✅ REVIEWS (REPLACES GALLERY) -->
+  <section id="reviews">
     <div class="container">
-      <div class="kicker">Recent work</div>
-      <h2>Project Gallery</h2>
-      <p>Add your before/after photos here. (These are placeholders for now.)</p>
+      <div class="kicker">Trusted by homeowners</div>
+      <h2>Customer Reviews</h2>
+      <p>Real feedback from clients who chose Trust Remodeling for their home projects.</p>
 
-      <div class="gallery">
-        <div class="ph">Before / After 1</div>
-        <div class="ph">Before / After 2</div>
-        <div class="ph">Before / After 3</div>
-        <div class="ph">Before / After 4</div>
-        <div class="ph">Before / After 5</div>
-        <div class="ph">Before / After 6</div>
+      <div class="grid3">
+        <div class="card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">
+            “Trust Remodeling did an amazing job on our kitchen. Clean work, great communication, and the
+            finish came out better than we expected.”
+          </p>
+          <div class="review-name">— Maria G.</div>
+          <div class="review-sub">Kitchen Remodel • Houston, TX</div>
+        </div>
+
+        <div class="card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">
+            “They rebuilt several rooms after water damage and handled everything professionally.
+            The crew showed up on time and kept the job site clean.”
+          </p>
+          <div class="review-name">— James D.</div>
+          <div class="review-sub">Restoration • Houston, TX</div>
+        </div>
+
+        <div class="card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">
+            “Bathroom remodel came out perfect. They explained the process, helped with material choices,
+            and finished on schedule. Highly recommend.”
+          </p>
+          <div class="review-name">— Kevin R.</div>
+          <div class="review-sub">Bathroom Remodel • Houston, TX</div>
+        </div>
+      </div>
+
+      <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="btn btn-primary" href="#contact">Get Your Free Estimate</a>
+        <a class="btn" href="tel:8327584045">Call 832-758-4045</a>
       </div>
     </div>
   </section>
@@ -406,5 +441,6 @@
   </script>
 </body>
 </html>
+
 
 
